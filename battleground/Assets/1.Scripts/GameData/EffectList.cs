@@ -6,4 +6,7 @@ public enum EffectList
 {
 	None = -1,
 	
+     asdas =  0,
+     asdasd =  1,
+
 }

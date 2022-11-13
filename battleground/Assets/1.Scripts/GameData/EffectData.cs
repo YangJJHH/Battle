@@ -101,12 +101,12 @@ public class EffectData : BaseData
     {
         if(names == null)
         {
-            names = new string[] { name };
+            names = new string[] { newName };
             effectClips = new EffectClip[] { new EffectClip() };
         }
         else
         {
-            names = ArrayHelper.Add(name, names);
+            names = ArrayHelper.Add(newName, names);
             effectClips = ArrayHelper.Add(new EffectClip(), effectClips);
         }
         return GetDataCount();

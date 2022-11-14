@@ -5,6 +5,7 @@ using UnityEngine;
 public class DataManager : MonoBehaviour
 {
     private static EffectData effectData = null;
+    private static SoundData soundData = null;
     void Start()
     {
         if(effectData == null)
@@ -12,6 +13,13 @@ public class DataManager : MonoBehaviour
             effectData = ScriptableObject.CreateInstance<EffectData>();
             effectData.LoadData();
         }
+
+        if (soundData == null)
+        {
+            soundData = ScriptableObject.CreateInstance<SoundData>();
+            soundData.LoadData();
+        }
+
     }
     public static EffectData EffectData()
     {
@@ -21,5 +29,15 @@ public class DataManager : MonoBehaviour
             effectData.LoadData();
         }
         return effectData;
+    }
+
+    public static SoundData SoundData()
+    {
+        if (soundData == null)
+        {
+            soundData = ScriptableObject.CreateInstance<SoundData>();
+            soundData.LoadData();
+        }
+        return soundData;
     }
 }

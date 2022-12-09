@@ -100,8 +100,8 @@ public class BehaviourController : MonoBehaviour
 
     private void Update()
     {
-        h = Input.GetAxis("Horiziontal");
-        v = Input.GetAxis("Vertiacl");
+        h = Input.GetAxis("Horizontal");
+        v = Input.GetAxis("Vertical");
 
         myAnimator.SetFloat(hFloat, h, 0.1f, Time.deltaTime);
         myAnimator.SetFloat(vFloat, v, 0.1f, Time.deltaTime);

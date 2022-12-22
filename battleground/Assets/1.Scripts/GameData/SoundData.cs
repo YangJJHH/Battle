@@ -15,7 +15,7 @@ public class SoundData : BaseData
 
     private string clipPath = "Sound/";
     private string xmlFilePath = "";
-    private string xmlFileName = "";
+    private string xmlFileName = "soundData.xml";
     private string dataPath = "Data/soundData";
     private static string SOUND = "sound";
     private static string CLIP = "clip";
@@ -171,7 +171,7 @@ public class SoundData : BaseData
                             break;
 
                         case "type":
-                            soundClips[currentID].playType = (SoundPlayType)Enum.Parse(typeof(SoundPlayType), reader.ToString());
+                            soundClips[currentID].playType = (SoundPlayType)Enum.Parse(typeof(SoundPlayType), reader.ReadString());
                             break;
                     }
 

@@ -13,7 +13,7 @@ public class EffectData : BaseData
 
     public string clipPath = "Effects/";
     private string xmlFilePath = "";
-    private string xmlFileName = "effctData.xml";
+    private string xmlFileName = "effectData.xml";
     private string dataPath = "Data/effectData";
     //XML 구분자
     private const string EFFECT = "effect"; //저장키

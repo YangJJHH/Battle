@@ -176,7 +176,7 @@ public class InteractiveWeapon : MonoBehaviour
     {
         gameObject.SetActive(true);
         transform.position += Vector3.up;
-        weaponRigidbody.isKinematic = true;
+        weaponRigidbody.isKinematic = false;
         transform.parent = null;
         CreateInteractiveRadius(weaponCollider.center);
         weaponCollider.enabled = true;

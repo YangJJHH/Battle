@@ -172,7 +172,7 @@ public class InteractiveWeapon : MonoBehaviour
         }
     }
 
-    private void Drop()
+    public void Drop()
     {
         gameObject.SetActive(true);
         transform.position += Vector3.up;

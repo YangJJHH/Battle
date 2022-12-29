@@ -64,4 +64,9 @@ public class EnemyAnimation : MonoBehaviour
         anim.SetFloat(AnimatorKey.Horizontal, strafeDirection.x, controller.generalStats.speedDampTime, Time.deltaTime);
         anim.SetFloat(AnimatorKey.Vertical, strafeDirection.z, controller.generalStats.speedDampTime, Time.deltaTime);
     }
+
+    void NavAnimSetup()
+    {
+
+    }
 }

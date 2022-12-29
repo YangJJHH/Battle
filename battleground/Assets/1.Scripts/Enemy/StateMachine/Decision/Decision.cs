@@ -24,7 +24,7 @@ public abstract class Decision : MonoBehaviour
         }
         else
         {
-            Collider[] targetsInRadius = Physics.OverlapSphere(controller.transform.position, radius, controller.genericStats.targetMask);
+            Collider[] targetsInRadius = Physics.OverlapSphere(controller.transform.position, radius, controller.generalStats.targetMask);
             return handleTargets(controller, targetsInRadius.Length > 0, targetsInRadius);
         }
     }

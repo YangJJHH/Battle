@@ -10,7 +10,7 @@ using UnityEngine.AI;
 /// </summary>
 public class StateController : MonoBehaviour
 {
-    public GenericStats genericStats;
+    public GenericStats generalStats;
     public ClassStats statData;
     public string classID;
     public ClassStats.Param classStats 
@@ -82,4 +82,36 @@ public class StateController : MonoBehaviour
             currentState = nextState;
         }
     }
+
+    public bool Strafing
+    {
+        get => straging;
+        set
+        {
+            enemyAnimation.anim.SetBool("Strafe", value);
+            straging = value;
+        }
+    }
+
+    public bool Aiming 
+    {
+        get => aiming;
+        set
+        {
+            if (aiming != value)
+            {
+                enemyAnimation.anim.SetBool("Aim", value);
+                aiming = value;
+            }
+        }
+    }
+
+    public IEnumerator UnstuckAim(float delay)
+    {
+        yield return new WaitForSeconds(delay * 0.5f);
+        Aiming = false;
+        yield return new WaitForSeconds(delay * 0.5f);
+        Aiming = true;
+    }
+
 }
